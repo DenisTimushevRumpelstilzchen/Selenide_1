@@ -9,7 +9,7 @@ repositories {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(11)
+        languageVersion = JavaLanguageVersion.of(11)  // версия java которую используем
     }
 }
 
@@ -20,7 +20,7 @@ compileTestJava {
 dependencies {
     // Selenide
     testImplementation("com.codeborne:selenide:6.4.0")
-    testRuntimeOnly("org.slf4j:slf4j-simple:1.7.32")
+    testRuntimeOnly("org.slf4j:slf4j-simple:1.7.36")  // дополнительные логи
 
     // JUnit 5
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
@@ -29,8 +29,6 @@ dependencies {
 }
 
 test {
-
     // systemProperty "chromeoptions.prefs", "intl.accept_languages=en" // язык браузера по умаолчанию
-
     useJUnitPlatform{}
 }
